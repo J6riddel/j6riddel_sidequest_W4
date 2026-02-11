@@ -6,7 +6,7 @@ GBDA302 Week 4 Example 4: layable Maze (JSON + Level class + Player class)
 
 ## Authors
 
-Karen Cochrane and David Han
+Karen Cochrane and David Han, Editied by Jake Riddell
 
 ---
 
