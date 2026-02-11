@@ -104,7 +104,7 @@ class Level {
         const v = this.grid[r][c];
 
         // Base tile fill
-        if (v === 1) fill(30, 50, 60);
+        if (v === 1) fill(blockc[0], blockc[1], blockc[2]);
         else fill(232);
 
         rect(c * this.ts, r * this.ts, this.ts, this.ts);

@@ -1,4 +1,3 @@
-
 const TS = 32;
 
 // Raw JSON data (from levels.json).
@@ -12,6 +11,8 @@ let li = 0;
 
 // Player instance (tile-based).
 let player;
+
+let blockc = [50, 50, 50];
 
 function preload() {
   // Ensure level data is ready before setup runs.
@@ -71,6 +72,7 @@ function keyPressed() {
   // If the player moved onto a goal tile, advance levels.
   if (moved && levels[li].isGoal(player.r, player.c)) {
     nextLevel();
+    colourChange();
   }
 }
 
@@ -112,4 +114,14 @@ function copyGrid(grid) {
   - And we don’t want to accidentally mutate the raw JSON data object. 
   */
   return grid.map((row) => row.slice());
+}
+
+function colourChange() {
+  if (li === 0) {
+    blockc = [30, 50, 60];
+  } else if (li === 1) {
+    blockc = [100, 12, 40];
+  } else {
+    blockc = [10, 220, 60];
+  }
 }
